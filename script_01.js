@@ -16,6 +16,20 @@
 // ausgabe(arr[3]);
 // ausgabe(arr[arr.length-1]);
 
+/* Theorie: Schleifen (for-schleife) */
+
+/* For -Schleife als Wiederholungs-Struktur */
+// for (let i = 0; i < 10; i++) {
+//     ausgabe(i);
+// }
+
+/* For-Schleife für Array-Index (Iteration)*/
+let arr = ["Ich","bin","der","coole","Max","Mütze"];
+for (let i = 0; i < arr.length; i++) {
+    // ausgabe(i);
+    ausgabe(arr[i]);
+}
+
 
 /*** 02a. Funktionalität mit Array 1  */
 // Kritik | Überlegung
@@ -38,7 +52,7 @@ function getSentenceArr(arr) {
 // --> "Ich bin Max Mütze."
 
 // Modul: Satz-String zusammensetzen
-// ausgabe(getSentence("Ich","bin","Max","Mütze"));
+ausgabe(getSentence("Ich","bin","Max","Mütze"));
 function getSentence(word1,word2,word3,word4) {
     const gap = " ";
     const punct = "."
