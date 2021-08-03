@@ -1,5 +1,7 @@
 /* Die Satzbau-Maschine | Arrays */
 
+/* THEORIE */
+
 /* Theorie: Array */
 
 // let arr;
@@ -24,10 +26,74 @@
 // }
 
 /* For-Schleife für Array-Index (Iteration)*/
-let arr = ["Ich","bin","der","coole","Max","Mütze"];
-for (let i = 0; i < arr.length; i++) {
-    // ausgabe(i);
-    ausgabe(arr[i]);
+// let arr = ["Ich","bin","der","coole","Max","Mütze"];
+// for (let i = 0; i < arr.length; i++) {
+//     // ausgabe(i);
+//     ausgabe(arr[i]);
+// }
+
+ /*********   Überlegungen - Transponierung **********/
+
+/* 
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Aufsummierung
+*/
+
+/* Zu "Fuß" - DRY !!! */
+// let a = 0; // Anfangswert
+// ausgabe("inhalt von a: " + a);
+// a = a + 1;  // a = 0 + 1
+// ausgabe("inhalt von a: " + a);
+// a = a + 1;  // a = 1 + 1
+// ausgabe("inhalt von a: " + a);
+// a = a + 1;  // a = 2 + 1
+// ausgabe("inhalt von a: " + a);
+// a = a + 1;  // a = 3 + 1
+// ausgabe("inhalt von a: " + a);
+
+/* Besser: mit FOR-Schleife */
+// let a = 0; // Anfangswert
+// for (let i = 0; i < 5; i++) {
+//     ausgabe("ausgabe aus der loop: " + a);
+//     a += 1; // a = a +1
+// }
+
+// ausgabe("ausgabe nach der loop: " + a);
+
+/* 
+1a. Einer Variablen kann Ihr eigener Wert zugewiesen werden
+Solange die Variable existiert, bleibt dieser erhalten
+hier: Verkettung eines Strings // Transponierung
+*/
+
+// let str = "";  // Anfangswert
+// const gap = " ";
+// const addStr = "Test";
+// for (let i = 0; i < 5; i++) {
+//     str += addStr + gap;
+// }
+
+// ausgabe(str);
+
+
+/* PRAXIS */
+
+
+/*** 02b. Funktionalität mit Array 2 */
+ausgabe(getSentenceArr2(["Ich","bin"]));
+ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"]));
+ausgabe(getSentenceArr2(["Ich","bin","der","coole","Max","Mütze"]));
+function getSentenceArr2(arr) {
+    const gap = " ";
+    const punct = "."
+    let str = "";
+
+    for (let i = 0; i < arr.length; i++) {
+        str += arr[i] + gap;
+    }
+
+    return str + punct; 
 }
 
 
@@ -52,7 +118,7 @@ function getSentenceArr(arr) {
 // --> "Ich bin Max Mütze."
 
 // Modul: Satz-String zusammensetzen
-ausgabe(getSentence("Ich","bin","Max","Mütze"));
+// ausgabe(getSentence("Ich","bin","Max","Mütze"));
 function getSentence(word1,word2,word3,word4) {
     const gap = " ";
     const punct = "."
