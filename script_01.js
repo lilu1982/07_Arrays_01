@@ -1,4 +1,4 @@
-/* Die Satzbau-Maschine | Arrays */
+/* Die Satzbau-Maschine | Arrays **/
 
 /* THEORIE */
 
